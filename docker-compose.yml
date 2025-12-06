@@ -1,0 +1,11 @@
+services:
+  github-readme-stats:
+    build: .
+    container_name: github-readme-stats
+    ports:
+      - "6129:6129"
+    environment:
+      - PORT=6129
+    env_file:
+      - .env
+    restart: unless-stopped
